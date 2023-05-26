@@ -11,8 +11,8 @@ const UserScreen = () => {
     useEffect(() => {
         //using the axios api method to call the api
         axios.get(url)
-        .then((response) => setData1(response.data.users)) //converting the response from the api to json format
-        .catch((error) => console.log(error))
+        .then((response) => setData1(response.data.users)) //handling success response
+        .catch((error) => console.log(error))//handling error response
         .finally(() => setLoading1(false));
         
      
